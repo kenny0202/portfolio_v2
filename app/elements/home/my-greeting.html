@@ -1,0 +1,59 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-greeting">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+      #introTextSize {
+        font-size: 20px;
+      }
+      paper-input {
+        width: 40%;
+      }
+    </style>
+    <paper-dialog id="modal" modal>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="buttons">
+        <paper-button dialog-confirm autofocus>Tap me to close</paper-button>
+      </div>
+    </paper-dialog>
+    <paper-input type="text" value="{{name}}" label="Name"></paper-input>
+    <h4 class="page-title"><span>{{greeting}} {{name}} !</span></h4>
+    <div id="introTextSize">
+      <span>Why hello there <span>{{name}}</span>. It seems that you have landed on my portfolio. Let me start off by introducing myself. My name is Kenny and I'm a developer located in Canada specializing in mobile and web development.</span>
+      <br>
+      <br>
+      <span>More information about my development experiences you can head over to the project section or you can click on this link <a href="http://kennyghui.com/projects">here!</a></span>
+    </div>
+  </template>
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'my-greeting',
+
+        properties: {
+          greeting: {
+            type: String,
+            value: 'Welcome',
+            notify: true
+          }
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

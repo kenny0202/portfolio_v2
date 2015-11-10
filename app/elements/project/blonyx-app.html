@@ -1,0 +1,67 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="blonyx-app">
+  <template>
+    <style include="shared-styles"></style>
+    <style>
+      :host {
+        display: block;
+      }
+      paper-button {
+        color: #ffffff;
+        background: #F44336;
+      }
+      paper-dialog {
+        width: 95%;
+        background: #ffffff;
+      }
+    </style>
+    <section onclick="clickHandler(event)">
+      <a href=""><img src="../../images/blonyx.png" height="10%" width="100%" data-dialog="animated-blonyx"></img></a>
+      <paper-dialog id="animated-blonyx" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
+        <h2>Blonyx</h2>
+        <paper-dialog-scrollable>
+          <p>Creatine YEEEE</p>
+        </paper-dialog-scrollable>
+        <div class="buttons">
+          <paper-button dialog-confirm autofocus>Close Project</paper-button>
+        </div>
+      </paper-dialog>
+    </section>
+  </template>
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'blonyx-app'
+      });
+    })();
+    function clickHandler(e) {// jshint ignore:line
+      var button = e.target;
+      while (!button.hasAttribute('data-dialog') && button !== document.body) {
+        button = button.parentElement;
+      }
+
+      if (!button.hasAttribute('data-dialog')) {
+        return;
+      }
+
+      var id = button.getAttribute('data-dialog');
+      var dialog = document.getElementById(id);
+      if (dialog) {
+        dialog.open();
+      }
+    }
+  </script>
+
+</dom-module>
