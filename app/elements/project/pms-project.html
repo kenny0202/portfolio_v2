@@ -24,6 +24,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         width: 95%;
         background: #B9F6CA;
       }
+      .l5 {
+        display: inline-block;
+      }
+      .fancy {
+        margin: auto;
+        --paper-card-header-color: #FFFFFF;
+        background: var(--paper-blue-500);
+        width: 100%;
+        text-align: center;
+      }
+      .fancy .big {
+        font-size: 22px;
+        padding: 8px 0 16px;
+        color: #000000;
+        text-align: center;
+      }
+      .fancy .card-content {
+        background: #FFFFFF;
+        margin: 0 auto;
+      }
+      paper-dialog-scrollable {
+        width: 100%;
+      }
     </style>
     <section onclick="clickHandler(event)">
       <a href=""><img src="../../images/pms.png" height="10%" width="100%" data-dialog="animated-pms"></img></a>
@@ -31,12 +54,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <h2>Project Management System</h2>
         <paper-dialog-scrollable>
           <p>PMS yeeeee scrollable</p>
+          <paper-card heading="Technologies" class='fancy'>
+            <div class="card-content">
+              <iron-grid id="grid">
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big">JSF</div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big">EJB</div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big">JPA</div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big">MySQL</div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big">PrimeFaces</div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big">Bootstrap</div>
+                  </paper-material>
+                </div>
+              </iron-grid>
+            </div>
+          </paper-card>
+          <br><br>
           <img src="../../images/pms/MainMenu.png" height="50%" width="100%"></img>
-          <br>
+          <br><br>
           <img src="../../images/pms/MonthlyReport.png" height="50%" width="100%"></img>
-          <br>
+          <br><br>
           <img src="../../images/pms/Projects.png" height="50%" width="100%"></img>
-          <br>
+          <br><br>
           <img src="../../images/pms/TimeSheet.png" height="50%" width="100%"></img>
         </paper-dialog-scrollable>
         <div class="buttons">
