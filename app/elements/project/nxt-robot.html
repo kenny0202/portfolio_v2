@@ -22,7 +22,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog {
         width: 95%;
-        background: #ffffff;
+        background: #B9F6CA;
+      }
+      .fancy {
+        margin: auto;
+        --paper-card-header-color: #FFFFFF;
+        background: var(--paper-blue-500);
+        width: 100%;
+        text-align: center;
+      }
+      .fancy .big {
+        font-size: 22px;
+        padding: 8px 0 16px;
+        color: #000000;
+        text-align: center;
+      }
+      .fancy .card-content {
+        background: #FFFFFF;
+        margin: 0 auto;
+      }
+      .videoLinks {
+        margin: auto;
+        --paper-card-header-color: #FFFFFF;
+        background: var(--paper-orange-500);
+        width: 100%;
+        text-align: center;
+      }
+      .videoLinks .big {
+        font-size: 22px;
+        padding: 8px 0 16px;
+        color: #000000;
+        text-align: center;
+      }
+      .videoLinks .card-content {
+        background: #FFFFFF;
+        margin: 0 auto;
+      }
+      #item {
+        background: var(--paper-orange-100);
+      }
+      a {
+        text-decoration: none;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
       }
     </style>
     <section onclick="clickHandler(event)">
@@ -30,7 +76,46 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-dialog id="animated-nxt" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>Legos NXT Mindstorm</h2>
         <paper-dialog-scrollable>
-          <p>NXT ROBOT</p>
+          <paper-card heading="Technologies" class='fancy'>
+            <div class="card-content">
+              <iron-grid id="grid">
+                <div class="l6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>Java</b></div>
+                  </paper-material>
+                </div>
+                <div class="l6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>LeJOS API</b></div>
+                  </paper-material>
+                </div>
+              </iron-grid>
+            </div>
+          </paper-card>
+          <br><br>
+          <img src="../../images/nxtrobot/whitedoor.jpg" height="50%" width="100%"></img>
+          <br><br>
+           <paper-card heading="Videos" class='videoLinks'>
+            <div class="card-content">
+              <iron-grid id="grid">
+                <div class="l4">
+                  <paper-material elevation="2" id="item">
+                    <div class="big"><a href="https://youtu.be/FHjvfDHaD60" target="_blank"><b>NXT Maze</b></a></div>
+                  </paper-material>
+                </div>
+                <div class="l4">
+                  <paper-material elevation="2" id="item">
+                    <div class="big"><a href="https://youtu.be/1GQyN633-qs" target="_blank"><b>NXT White Door</b></a></div>
+                  </paper-material>
+                </div>
+                <div class="l4">
+                  <paper-material elevation="2" id="item">
+                    <div class="big"><a href="https://youtu.be/LL1P7EWWYGg" target="_blank"><b>NXT Battle</b></a></div>
+                  </paper-material>
+                </div>
+              </iron-grid>
+            </div>
+          </paper-card>
         </paper-dialog-scrollable>
         <div class="buttons">
           <paper-button dialog-confirm autofocus>Close Project</paper-button>

@@ -22,7 +22,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog {
         width: 95%;
-        background: #ffffff;
+        background: #B9F6CA;
+      }
+      .fancy {
+        margin: auto;
+        --paper-card-header-color: #FFFFFF;
+        background: var(--paper-blue-500);
+        width: 100%;
+        text-align: center;
+      }
+      .fancy .big {
+        font-size: 22px;
+        padding: 8px 0 16px;
+        color: #000000;
+        text-align: center;
+      }
+      .fancy .card-content {
+        background: #FFFFFF;
+        margin: 0 auto;
       }
     </style>
     <section onclick="clickHandler(event)">
@@ -30,7 +47,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-dialog id="animated-health" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>Simple Health Plan</h2>
         <paper-dialog-scrollable>
-          <p>Recipes and workouts YEEEE</p>
+          <paper-card heading="Technologies" class='fancy'>
+            <div class="card-content">
+              <iron-grid id="grid">
+                <div class="l6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>Java</b></div>
+                  </paper-material>
+                </div>
+                <div class="l6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>SQLite</b></div>
+                  </paper-material>
+                </div>
+              </iron-grid>
+            </div>
+          </paper-card>
+          <br><br>
+          <iron-grid>
+            <div class="l6">
+              <img src="../../images/healthplan/healthplan1.png" height="60%" width="45%"></img>
+            </div>
+            <div class="l6">
+              <img src="../../images/healthplan/healthplan2.png" height="60%" width="45%"></img>
+            </div>
+            <div class="l6">
+              <img src="../../images/healthplan/healthplan3.png" height="60%" width="45%"></img>
+            </div>
+            <div class="l6">
+              <img src="../../images/healthplan/healthplan4.png" height="60%" width="45%"></img>
+            </div>
+            <div class="l6">
+              <img src="../../images/healthplan/healthplan5.png" height="60%" width="45%"></img>
+            </div>
+          </iron-grid>
         </paper-dialog-scrollable>
         <div class="buttons">
           <paper-button dialog-confirm autofocus>Close Project</paper-button>

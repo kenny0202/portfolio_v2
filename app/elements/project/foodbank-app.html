@@ -24,13 +24,56 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         width: 95%;
         background: #B9F6CA;
       }
+      .fancy {
+        margin: auto;
+        --paper-card-header-color: #FFFFFF;
+        background: var(--paper-blue-500);
+        width: 100%;
+        text-align: center;
+      }
+      .fancy .big {
+        font-size: 22px;
+        padding: 8px 0 16px;
+        color: #000000;
+        text-align: center;
+      }
+      .fancy .card-content {
+        background: #FFFFFF;
+        margin: 0 auto;
+      }
     </style>
     <section onclick="clickHandler(event)">
       <a href=""><img src="../../images/food_bank.png" height="10%" width="100%" data-dialog="animated-foodbank"></img></a>
       <paper-dialog id="animated-foodbank" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>FoodBank Social Media</h2>
         <paper-dialog-scrollable>
-          <p>Notifications</p>
+          <paper-card heading="Technologies" class='fancy'>
+            <div class="card-content">
+              <iron-grid id="grid">
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>Ionic</b></div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>AngularJS</b></div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>Ruby on Rails</b></div>
+                  </paper-material>
+                </div>
+                <div class="l6 m6">
+                  <paper-material elevation="2">
+                    <div class="big"><b>MySQL</b></div>
+                  </paper-material>
+                </div>
+              </iron-grid>
+            </div>
+          </paper-card>
+          <br><br>
           <img src="../../images/foodbank/hackathon_1.png" height="50%" width="100%"></img>
           <br>
           <img src="../../images/foodbank/hackathon_2.png" height="50%" width="100%"></img>
