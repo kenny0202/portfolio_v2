@@ -22,7 +22,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog {
         width: 95%;
-        background: #B9F6CA;
+        background: var(--paper-purple-500);
+        color: #ffffff;
       }
       .fancy {
         margin: auto;
@@ -30,6 +31,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background: var(--paper-blue-500);
         width: 100%;
         text-align: center;
+        --paper-card-header-text: {font-weight: bold;};
       }
       .fancy .big {
         font-size: 22px;
@@ -41,12 +43,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background: #FFFFFF;
         margin: 0 auto;
       }
+      paper-dialog-scrollable {
+        width: 100%;
+        background: var(--paper-blue-100);
+      }
     </style>
     <section onclick="clickHandler(event)">
       <a href=""><img src="../../images/food_bank.png" height="10%" width="100%" data-dialog="animated-foodbank"></img></a>
       <paper-dialog id="animated-foodbank" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>FoodBank Social Media</h2>
         <paper-dialog-scrollable>
+          <br>
           <paper-card heading="Technologies" class='fancy'>
             <div class="card-content">
               <iron-grid id="grid">
@@ -87,6 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <img src="../../images/foodbank/hackathon_6.png" height="50%" width="100%"></img>
           <br>
           <img src="../../images/foodbank/hackathon_7.png" height="50%" width="100%"></img>
+          <br><br>
         </paper-dialog-scrollable>
         <div class="buttons">
           <paper-button dialog-confirm autofocus>Close Project</paper-button>

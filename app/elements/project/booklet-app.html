@@ -22,7 +22,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog {
         width: 95%;
-        background: #B9F6CA;
+        background: var(--paper-green-a700);
+        color: #ffffff;
+      }
+      paper-dialog-scrollable {
+        width: 100%;
+        background: var(--paper-blue-100);
       }
     </style>
     <section onclick="clickHandler(event)">
@@ -30,6 +35,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-dialog id="animated-booklet" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <div class="title-bar"><h2>Booklet Android</h2></div>
         <paper-dialog-scrollable>
+          <br>
           <iron-grid>
             <div class="l6">
               <img src="../../images/booklet/booklet1.png" height="60%" width="45%"></img>
@@ -41,6 +47,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <img src="../../images/booklet/booklet3.png" height="60%" width="45%"></img>
             </div>
           </iron-grid>
+          <br><br>
         </paper-dialog-scrollable>  
         <div class="buttons">
           <paper-button dialog-confirm autofocus>Close Project</paper-button>

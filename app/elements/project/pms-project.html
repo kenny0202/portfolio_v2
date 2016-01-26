@@ -22,7 +22,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog {
         width: 95%;
-        background: #B9F6CA;
+        background: #212121;
+        color: #ffffff;
       }
       .l5 {
         display: inline-block;
@@ -33,6 +34,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background: var(--paper-blue-500);
         width: 100%;
         text-align: center;
+        --paper-card-header-text: {font-weight: bold;};
       }
       .fancy .big {
         font-size: 22px;
@@ -46,6 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog-scrollable {
         width: 100%;
+        background: var(--paper-blue-100);
       }
     </style>
     <section onclick="clickHandler(event)">
@@ -53,7 +56,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-dialog id="animated-pms" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>Project Management System</h2>
         <paper-dialog-scrollable>
-          <p>PMS yeeeee scrollable</p>
+          <br>
           <paper-card heading="Technologies" class='fancy'>
             <div class="card-content">
               <iron-grid id="grid">
@@ -98,6 +101,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <img src="../../images/pms/Projects.png" height="50%" width="100%"></img>
           <br><br>
           <img src="../../images/pms/TimeSheet.png" height="50%" width="100%"></img>
+          <br><br>
         </paper-dialog-scrollable>
         <div class="buttons">
           <paper-button dialog-confirm autofocus>Close Project</paper-button>

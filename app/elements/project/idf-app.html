@@ -22,7 +22,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-dialog {
         width: 95%;
-        background: #B9F6CA;
+        background: var(--paper-blue-500);
+        color: #ffffff;
       }
       .fancy {
         margin: auto;
@@ -30,6 +31,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background: var(--paper-blue-500);
         width: 100%;
         text-align: center;
+        --paper-card-header-text: {font-weight: bold;};
       }
       .fancy .big {
         font-size: 22px;
@@ -41,12 +43,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background: #FFFFFF;
         margin: 0 auto;
       }
+      paper-dialog-scrollable {
+        width: 100%;
+        background: #F8BBD0;
+      }
     </style>
     <section onclick="clickHandler(event)">
       <a href=""><img src="../../images/idf.jpg" height="10%" width="100%" data-dialog="animated-idf"></img></a>
       <paper-dialog id="animated-idf" entry-animation="scale-up-animation" exit-animation="fade-out-animation" with-backdrop>
         <h2>IDF Race App management</h2>
         <paper-dialog-scrollable>
+          <br>
           <paper-card heading="Technologies" class='fancy'>
             <div class="card-content">
               <iron-grid id="grid">
@@ -83,6 +90,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <img src="../../images/idf/idf4.png" height="50%" width="100%"></img>
           <br>
           <img src="../../images/idf/idf5.png" height="50%" width="100%"></img>
+          <br><br>
         </paper-dialog-scrollable>
         <div class="buttons">
           <paper-button dialog-confirm autofocus>Close Project</paper-button>
