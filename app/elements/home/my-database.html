@@ -9,7 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="my-framework">
+<dom-module id="my-database">
   <template>
     <style>
       :host {
@@ -19,7 +19,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-size: 20px;
       }
     </style>
-    <h2 class="page-title"><span>{{frameworks}}</span></h2>
+    <h2 class="page-title"><span>{{database}}</span></h2>
     <div id="textSize">
       <template is="dom-repeat" items="{{items}}">
         <li><span class="paper-font-body1">{{item}}</span></li>
@@ -32,11 +32,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       'use strict';
 
       Polymer({
-        is: 'my-framework',
+        is: 'my-database',
         properties: {
-          frameworks: {
+          database: {
             type: String,
-            value: 'Frameworks',
+            value: 'Databases',
             notify: true
           },
           items: {
@@ -46,12 +46,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         ready: function() {
           this.items = [
-            'JavaServer Faces',
-            'ASP.NET MVC 5',
-            'Ionic',
-            'Bootstrap',
-            'Android',
-            'iOS'
+            'Oracle 11g',
+            'MySQL',
+            'SQLite',
+            'MSSQL',
+            'MongoDB',
+            'SAP HANA'
           ];
         }
       });
