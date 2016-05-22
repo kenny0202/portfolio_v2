@@ -9,7 +9,9 @@
     "neon-elements": "PolymerElements/neon-elements#^1.0.0",
     "page": "visionmedia/page.js#~1.6.3",
     "paper-card": "PolymerElements/paper-card#~1.0.7",
-    "google-chart": "GoogleWebComponents/google-chart#~1.0.4"
+    "google-chart": "GoogleWebComponents/google-chart#~1.0.4",
+    "vaadin-charts": "3.0.0-alpha9",
+    "social-media-icons": "~1.0.3"
   },
   "devDependencies": {
     "web-component-tester": "*",

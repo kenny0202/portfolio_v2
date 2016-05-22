@@ -9,45 +9,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="sap-experience2">
+<dom-module id="my-footer">
   <template>
     <style include="shared-styles"></style>
     <style>
       :host {
         display: block;
       }
-      #introTextSize {
-        font-size: 20px;
-      }
     </style>
-    <img src="../../images/sap.png"></img>
-    <div id="introTextSize">
-      <span><b>{{title}}</b></span></br>
-      <span>{{date}}</span></br>
-      <span>{{description}}</span>
-    </div>
+    <h2 class="page-title"><span>{{footer}} &copy; &nbsp;&nbsp;&nbsp;
+    <social-media-icons icon="github" color="#00B44B" size="57" href="https://github.com/kenny0202" new-tab></social-media-icons>
+    <social-media-icons icon="linkedin" color="#00B44B" size="57" href="https://www.linkedin.com/in/kennyhui" new-tab></social-media-icons></span></h2>
   </template>
   <script>
     (function() {
       'use strict';
       
       Polymer({
-        is: 'sap-experience2',
+        is: 'my-footer',
 
         properties: {
-          title: {
+          footer: {
             type: String,
-            value: 'Tools Developer',
-            notify: true
-          },
-          date: {
-            type: String,
-            value: 'March 2016 - Present',
-            notify: true
-          },
-          description: {
-            type: String,
-            value: 'SAP HANA Tools Developer',
+            value: 'Created by Kenny Hui',
             notify: true
           }
         }
